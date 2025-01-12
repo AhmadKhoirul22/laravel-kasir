@@ -1,13 +1,13 @@
 <nav class="top-nav">
     <ul>
         <li>
-            <a href="top-menu-dashboard.html" class="top-menu top-menu--active">
+            <a href="{{ route('dashboard') }}" class="top-menu top-menu--active">
                 <div class="top-menu__icon"> <i data-feather="home"></i> </div>
                 <div class="top-menu__title"> Dashboard </div>
             </a>
         </li>
         <li>
-            <a href="javascript:;" class="top-menu">
+            <a href="{{ route('user-index') }}" class="top-menu">
                 <div class="top-menu__icon"> <i data-feather="box"></i> </div>
                 <div class="top-menu__title"> User </div>
             </a>
