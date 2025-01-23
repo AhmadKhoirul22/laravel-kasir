@@ -17,7 +17,7 @@ class Kategori_Controller extends Controller
 
     public function store(Request $request){
         $validasi = request()->validate([
-            'kategori_nama' => 'required|string|min:4|max:200',
+            'kategori_nama' => 'required|string|min:4|max:200|unique:kategori,kategori_nama',
         ]);
         if($validasi == false){
             return redirect()->back()->withErrors($validasi)->withInput();
