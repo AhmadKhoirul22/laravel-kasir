@@ -17,7 +17,7 @@ class User_Controller extends Controller
 
     public function store(Request $request){
         $validasi = request()->validate([
-            'name' => 'required|string|min:4|max:200',
+            'name' => 'required|string|min:4|max:200|unique:users,name',
             'email' => 'required|string|min:5',
             'username' => 'required|string|min:4|max:200',
             'password' => 'required|string|min:4',
