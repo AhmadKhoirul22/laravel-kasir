@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth_Controller;
 use App\Http\Controllers\Dashboard_Controller;
 use App\Http\Controllers\Kategori_Controller;
 use App\Http\Controllers\Produk_Controller;
@@ -20,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/login',[Auth_Controller::class,'index'])->name('login');
+
 
 Route::get('/',[Dashboard_Controller::class,'index'])->name('dashboard');
 
