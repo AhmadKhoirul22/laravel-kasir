@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/login',[Auth_Controller::class,'index'])->name('login');
+Route::post('/auth',[Auth_Controller::class,'auth'])->name('auth');
 
 
 Route::get('/',[Dashboard_Controller::class,'index'])->name('dashboard');
