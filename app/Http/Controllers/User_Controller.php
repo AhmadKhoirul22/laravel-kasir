@@ -7,6 +7,9 @@ use App\Models\User;
 
 class User_Controller extends Controller
 {
+    public function __construct(){
+        
+    }
     public function index(){
         $user = User::all();
         return view('user',[
