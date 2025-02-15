@@ -8,7 +8,7 @@ use App\Models\User;
 class User_Controller extends Controller
 {
     public function __construct(){
-
+        $this->middleware('auth');
     }
     public function index(){
         $user = User::all();
